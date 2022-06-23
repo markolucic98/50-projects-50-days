@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.slider-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.left-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 35%;
+  transition: transform 0.3s ease-in-out;
+}
+.left-slider > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.left-slider p {
+  margin-top: 15px;
+  font-size: 22px;
+}
+.right-slider {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.right-slider > div {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+.slider-container .button-container button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+.down-arrow {
+  transform: translateX(-100%) translateY(50%);
+  border-radius: 8px 0px 0px 8px;
+}
+.down-arrow,
+.up-arrow {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+}
+.down-arrow:hover,
+.up-arrow:hover {
+  background-color: #222;
+  color: #fff;
+}
+.up-arrow {
+  border-radius: 0px 8px 8px 0px;
+}
